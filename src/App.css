@@ -1,0 +1,179 @@
+/* --------------------------------------------------------- */
+/* RESET GENERAL – asegura que nada se desborde               */
+/* --------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* elimina el desplazamiento horizontal */
+  font-family: system-ui, sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+/* --------------------------------------------------------- */
+/* CONTENEDORES BASE – centran todo el contenido              */
+/* --------------------------------------------------------- */
+
+.container,
+.hero-inner,
+main {
+  width: 100%;
+  max-width: 1100px; /* centrado exacto */
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+/* --------------------------------------------------------- */
+/* HERO (parte superior)                                      */
+/* --------------------------------------------------------- */
+
+.hero {
+  background: linear-gradient(135deg, #0d1b2a, #0b1220);
+  padding: 3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+}
+
+.hero-role {
+  color: #38bdf8;
+  margin-top: 0.5rem;
+}
+
+.hero-contact {
+  margin-top: 0.3rem;
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------- */
+/* SECCIONES PRINCIPALES                                      */
+/* --------------------------------------------------------- */
+
+.section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  border-left: 4px solid #38bdf8;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------- */
+/* CARDS (los cuadrados)                                      */
+/* --------------------------------------------------------- */
+
+.card {
+  background: #0d1b2a;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.card .muted {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.card ul {
+  list-style: disc;
+  margin-left: 1rem;
+  margin-top: 0.8rem;
+}
+
+.card li {
+  margin-bottom: 0.4rem;
+}
+
+/* --------------------------------------------------------- */
+/* GRILLAS DE SKILLS / PROYECTOS                             */
+/* --------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Pantallas grandes: 2 columnas */
+@media (min-width: 900px) {
+  .grid.projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid.skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Pantallas chicas: 1 sola columna */
+@media (max-width: 899px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------- */
+/* SKILL CHIPS INTERACTIVOS                                   */
+/* --------------------------------------------------------- */
+
+.skill-chip {
+  display: inline-block;
+  background: #1e293b;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-chip:hover {
+  background: #38bdf8;
+  color: #0b1120;
+  border-color: #38bdf8;
+}
+
+.skill-detail {
+  margin-top: 1.2rem;
+  background: #0a1626;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border-left: 4px solid #38bdf8;
+}
+
+/* --------------------------------------------------------- */
+/* FOOTER                                                     */
+/* --------------------------------------------------------- */
+
+footer {
+  text-align: center;
+  color: #94a3b8;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 3rem;
+}
